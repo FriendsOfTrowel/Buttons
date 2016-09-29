@@ -1,23 +1,41 @@
 // Synthax
+$button--prefix: 'c' !default;
+
 $button--synthax: (
-  'prefix': 'c',
+  'prefix': $button--prefix,
   'separator': (
     'prefix': '-',
     'element': '__',
     'modifier': '--',
   ),
+);
+
+$button--display: (
+  'default': inline-block,
+  '-block': block,
+) !default;
+$button--color: rgb(255, 255, 255) !default;
+$button--font-family: null !default;
+$button--font-weight: null !default;
+$button--font-size: 1rem !default;
+$button--float: null !default;
+$button--line-height: 2em !default;
+$button--text-align: center !default;
+$button--margin: null !default;
+$button--vertical-align: middle !default;
+$button--cursor: null !default;
+$button--border-radius: 0.272728em !default;
+$button--border-width: (
+  '<button': 0,
+  '<input': 0,
 ) !default;
 
-// Variables
-$button--var-1: (
-  'default': 'var-1--default',
-  '-modifier': 'var-1--modifier',
-  '@sm': 'var-1--breakpoint',
-  '<a': (
-    'default': 'var-1--tag',
-    ':hover': 'var-1--a:hover',
-  ),
-  ':hover': 'var-1--hover',
-) !default;
-
-$button--var-2: 'var-2' !default;
+$button--border-style: null !default;
+$button--border-color: null !default;
+$button--background-color: rgb(251, 55, 104) !default;
+$button--text-decoration: null !default;
+$button--text-transform: null !default;
+$button--letter-spacing: null !default;
+$button--padding: 0.666666667em 1.666666667em !default;
+$button--box-shadow: null !default;
+$button--transition: null !default;
