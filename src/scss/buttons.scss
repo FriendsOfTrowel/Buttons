@@ -1,0 +1,21 @@
+@import 'variables';
+@import 'mixins/mixin-example';
+
+/**
+ * buttons
+ */
+
+@mixin mixin-dispatcher($value, $flags, $mixin) {
+  @if $mixin == 'buttons--mixin-example' {
+    @include buttons--mixin-example($value, $flags);
+  }
+};
+
+$selector: selector--constructor($button--synthax, 'button');
+
+@include selector($selector) {
+  @include declaration('-include-buttons--mixin-example', $button--var-1);
+  @include declaration('content', $button--var-2);
+
+  @include block-generation;
+}

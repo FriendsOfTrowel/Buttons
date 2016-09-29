@@ -1,0 +1,3 @@
+@mixin buttons--mixin-example($value, $flags) {
+  @include declaration('content', $value, $flags);
+}

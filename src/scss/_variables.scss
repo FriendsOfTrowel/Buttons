@@ -1,0 +1,23 @@
+// Synthax
+$button--synthax: (
+  'prefix': 'c',
+  'separator': (
+    'prefix': '-',
+    'element': '__',
+    'modifier': '--',
+  ),
+) !default;
+
+// Variables
+$button--var-1: (
+  'default': 'var-1--default',
+  '-modifier': 'var-1--modifier',
+  '@sm': 'var-1--breakpoint',
+  '<a': (
+    'default': 'var-1--tag',
+    ':hover': 'var-1--a:hover',
+  ),
+  ':hover': 'var-1--hover',
+) !default;
+
+$button--var-2: 'var-2' !default;

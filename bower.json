@@ -1,0 +1,41 @@
+{
+  "name": "trowel-buttons",
+  "homepage": "https://github.com/FriendsOfTrowel/buttons",
+  "authors": [
+    "Loïc Goyet <loic@troopers.email>"
+  ],
+  "description": "The official Trowel Component for Buttons",
+  "main": [
+    "src/scss/buttons.scss",
+    "src/twig/buttons.html.twig",
+    "injector.json"
+  ],
+  "keywords": [
+    "scss",
+    "css",
+    "twig",
+    "html",
+    "trowel",
+    "trowel-buttons",
+    "buttons"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    ".bowerrc",
+    ".gitignore",
+    "gulpfile.js",
+    "package.json",
+    "sache.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FriendsOfTrowel/buttons.git"
+  },
+  "dependencies": {
+    "trowel-core": "^1.0.0",
+    "sassy-maps": "^0.4.0"
+  }
+}
