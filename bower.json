@@ -35,7 +35,7 @@
     "url": "git+https://github.com/FriendsOfTrowel/buttons.git"
   },
   "dependencies": {
-    "trowel-core": "^1.0.0",
-    "sassy-maps": "^0.4.0"
+    "sassy-maps": "^0.4.0",
+    "trowel-core": "^1.2.0"
   }
 }
