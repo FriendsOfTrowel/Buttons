@@ -15,7 +15,44 @@
     </h1>
 
 
-    {% include '../../src/twig/buttons.html.twig' %}
-    
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['lg'], 'content': 'button lg'} %}
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': [], 'content': 'button md'} %}
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['sm'], 'content': 'button sm'} %}
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['xs'], 'content': 'button xs'} %}
+
+    <hr>
+
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': [], 'content': 'default'} %}
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['primary'], 'content': 'primary'} %}
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['success'], 'content': 'success'} %}
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['warning'], 'content': 'warning'} %}
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['danger'], 'content': 'danger'} %}
+
+    <hr>
+
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['block', 'primary'], 'content': 'button block'} %}
+
+    <hr>
+
+    {% embed '../../src/twig/buttons.html.twig' with { 'modifiers': ['primary'], 'content': 'disabled attr'} only %}
+        {% block additional_attrs %}disabled="true"{% endblock %}
+    {% endembed %}
+
+    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['disabled', 'primary'], 'content': 'disabled class'} %}
+
+    <hr>
+
+    <div class="c-btn-group">
+        {% include '../../src/twig/buttons.html.twig' with { 'content': 'default'} %}
+        {% include '../../src/twig/buttons.html.twig' with { 'content': 'default'} %}
+        {% include '../../src/twig/buttons.html.twig' with { 'content': 'default'} %}
+    </div>
+
+    <div class="c-btn-group">
+        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['primary'], 'content': 'primary'} %}
+        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['success'], 'content': 'success'} %}
+        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['warning'], 'content': 'warning'} %}
+    </div>
+
   </body>
 </html>

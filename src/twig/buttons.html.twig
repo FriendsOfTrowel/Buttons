@@ -1,4 +1,16 @@
-{# Here comes the buttons markup #}
+{% set block_selector = selector_prefix|default('c-') ~ 'btn' %}
+{% set block_tag = block_tag|default('button') %}
 
-{% set selector_prefix = 'c-' %}
-<button class="{{ selector_prefix }}btn">hello world !</button>
+{% set block_modifiers = '' %}
+{% for modifier in modifiers|default([]) %}
+    {% set block_modifiers = block_modifiers ~ block_selector ~ '--' ~ modifier ~ ' ' %}
+{% endfor %}
+
+<{{ block_tag }}
+    {% block attrs %}
+        {% block href %}{% if block_tag == 'a' %}href="{{ href|default('#') }}"{% endif %}{% endblock %}
+        {% block block_class %}class="{% block block_class_binding %}{{ block_selector }} {{ block_modifiers }}{% endblock %}"{% endblock %}
+        {% block additional_attrs %}{% endblock %}>
+    {% endblock attrs %}
+    {% block content %}{{ content|default('hello world !') }}{% endblock %}
+</{{ block_tag }}>

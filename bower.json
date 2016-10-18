@@ -36,6 +36,6 @@
   },
   "dependencies": {
     "sassy-maps": "^0.4.0",
-    "trowel-core": "^1.2.0"
+    "trowel-core": "^1.2.3"
   }
 }

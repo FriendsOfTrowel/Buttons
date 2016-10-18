@@ -11,9 +11,9 @@
   }
 };
 
-$selector: selector--constructor($button--synthax, 'btn');
+$button--selector: selector--constructor($button--synthax, 'btn');
 
-@include selector($selector) {
+@include selector($button--selector) {
   @include declaration('display', $button--display);
   @include declaration('color', $button--color);
   @include declaration('font-family', $button--font-family);
@@ -26,6 +26,8 @@ $selector: selector--constructor($button--synthax, 'btn');
   @include declaration('touch-action', manipulation);
   @include declaration('cursor', $button--cursor);
   @include declaration('background-image', none); // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  // @include declaration('-include-background-color', $button--background-color);
+  @include declaration('background-color', $button--background-color);
   @include declaration('user-select', none);
   @include declaration('white-space', nowrap);
   @include declaration('border-radius', $button--border-radius);
@@ -35,18 +37,51 @@ $selector: selector--constructor($button--synthax, 'btn');
   @include declaration('padding', $button--padding);
   @include declaration('box-shadow', $button--box-shadow);
   @include declaration('transition', $button--transition);
-  @include declaration('-include-background-color', $button--background-color);
   @include declaration('border-width', $button--border-width);
   @include declaration('border-style', $button--border-style);
   @include declaration('border-color', $button--border-color);
   @include declaration('float', $button--float);
-
+  @include declaration('width', $button--width);
+  @include declaration('opacity', $button--opacity);
   @include declaration('cursor', default);
   @include declaration('cursor', pointer, ('<button'));
 
-  @include block-generation;
+  @include block-generation($button--selector);
 
   svg {
     vertical-align: middle;
   }
+}
+
+
+$button-group--selector: selector--constructor($button--synthax, 'btn-group');
+
+@include selector($button-group--selector) {
+  @include declaration('display', flex);
+
+  @include block-generation($button-group--selector);
+}
+
+$button-inside-group--selector: selector--append-parent($button--selector, $button-group--selector, '>');
+
+@include selector($button-inside-group--selector) {
+  @include declaration('position', relative);
+  @include declaration('z-index', 2, (':hover'));
+  @include declaration('z-index', 2, (':active'));
+  @include declaration('z-index', 2, (':focus'));
+  @include declaration('border-top-left-radius', 0, ':not(:first-child)');
+  @include declaration('border-bottom-left-radius', 0, ':not(:first-child)');
+  @include declaration('border-top-right-radius', 0, ':not(:last-child)');
+  @include declaration('border-bottom-right-radius', 0, ':not(:last-child)');
+
+  @include block-generation($button-inside-group--selector);
+}
+
+
+$button-inside-group-not-first--selector: selector--append-parent($button-inside-group--selector, $button--selector, '+');
+
+@include selector($button-inside-group-not-first--selector) {
+  @include declaration('margin-left', -1px);
+
+  @include block-generation($button-inside-group-not-first--selector);
 }
