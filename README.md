@@ -12,9 +12,16 @@ buttons is a *Trowel Component*, please refer to the [Trowel doc](http://trowel.
 You can easily install trowel-buttons by using NPM or Bower
 
 ```bash
-$ bower install trowel-buttons
-$ npm install trowel-buttons
+# With bower
+$ bower install friendsOfTrowel-buttons-component
+
+# With npm
+$ npm install friendsOfTrowel-buttons-component
+
+# With yarn
+$ yarn add friendsOfTrowel-buttons-component
 ```
+
 
 You can also download a zip archive [right here](https://github.com/FriendsOfTrowel/buttons/archive/master.zip).
 
@@ -27,7 +34,7 @@ The main scss file to include to your main `.scss` file is located at the `./src
 @import './path/to/dependencies/sassy-maps/sass/sassy-maps';
 @import './path/to/dependencies/trowel-core/src/trowel';
 
-// Trowel Component Buttons 
+// Trowel Component Buttons
 @import './path/to/dependencies/src/scss/buttons.scss';
 ```
 

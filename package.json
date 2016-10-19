@@ -1,11 +1,10 @@
 {
-  "name": "trowel-buttons",
+  "name": "friendsOfTrowel-buttons-component",
   "version": "0.0.0",
   "description": "The official Trowel Component for Buttons",
   "scripts": {
     "test": "gulp test",
-    "start": "gulp test_watch",
-    "register": "bower register trowel-buttons https://github.com/FriendsOfTrowel/buttons"
+    "start": "gulp test_watch"
   },
   "repository": {
     "type": "git",
