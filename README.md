@@ -27,7 +27,7 @@ The main scss file to include to your main `.scss` file is located at the `./src
 @import './path/to/dependencies/sassy-maps/sass/sassy-maps';
 @import './path/to/dependencies/trowel-core/src/trowel';
 
-// buttons * Trowel Components
+// Trowel Component Buttons 
 @import './path/to/dependencies/src/scss/buttons.scss';
 ```
 
