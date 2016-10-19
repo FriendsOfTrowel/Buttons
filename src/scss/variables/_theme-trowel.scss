@@ -1,21 +1,37 @@
 // scss-lint:disable ColorVariable
 
-// Synthax
-$button--prefix: 'c' !default;
-$button--synthax: (
-  'prefix': $button--prefix,
-  'separator': (
-    'prefix': '-',
-    'element': '__',
-    'modifier': '--',
-  ),
-);
+// positioning
+$button--vertical-align: middle !default;
 
+$button--float: null !default;
+
+
+// display & box-model
 $button--display: (
   'default': inline-block,
   '-block': block,
 ) !default;
 
+$button--border-width: (
+  'default': 0,
+  '-default': 0.0625em,
+) !default;
+
+$button--padding: (
+  'default': 0.666666667em 1.666666667em,
+  '-default': #{0.666666667em - value($button--border-width, ('-default'))} #{1.666666667em - value($button--border-width, ('-default'))},
+  '-xs': 0.666666667em 1.333333337em,
+) !default;
+
+$button--width: (
+  '-block': 100%,
+) !default;
+
+$button--margin: null !default;
+$button--height: null !default;
+
+
+// color
 $button--color: (
   'default': rgb(31, 13, 51),
   '-primary': rgb(255, 255, 255),
@@ -23,23 +39,6 @@ $button--color: (
   '-danger': rgb(255, 255, 255),
   '-warning': rgb(255, 255, 255),
 ) !default;
-
-$button--font-size: (
-  'default': 1rem,
-  '-lg': 1.2rem,
-  '-sm': 0.8rem,
-  '-xs': 0.65rem,
-) !default;
-
-$button--line-height: 1.2em !default;
-$button--text-align: center !default;
-$button--vertical-align: middle !default;
-$button--border-radius: 0.2em !default;
-$button--border-width: (
-  'default': 0,
-  '-default': 0.0625em,
-) !default;
-$button--border-style: solid !default;
 
 $button--border-color: (
   '-default': currentColor,
@@ -68,33 +67,38 @@ $button--background-color: (
   ),
 ) !default;
 
+$button--opacity: (
+  '[disabled="true"': 0.5,
+) !default;
+
+
+// text
+$button--font-size: (
+  'default': 1rem,
+  '-lg': 1.2rem,
+  '-sm': 0.8rem,
+  '-xs': 0.65rem,
+) !default;
+
 $button--text-decoration: (
   '-link': (
     ':hover': underline,
   )
 ) !default;
 
-$button--padding: (
-  'default': 0.666666667em 1.666666667em,
-  '-default': #{0.666666667em - value($button--border-width, ('-default'))} #{1.666666667em - value($button--border-width, ('-default'))},
-  '-xs': 0.666666667em 1.333333337em,
-) !default;
-
-$button--width: (
-  '-block': 100%,
-) !default;
-
-$button--opacity: (
-  '[disabled="true"': 0.5,
-) !default;
+$button--line-height: 1.2em !default;
+$button--text-align: center !default;
 
 $button--font-family: null !default;
 $button--font-weight: null !default;
 $button--text-transform: null !default;
 $button--letter-spacing: null !default;
+
+
+// order
+$button--border-radius: 0.2em !default;
+$button--border-style: solid !default;
+
 $button--box-shadow: null !default;
 $button--transition: null !default;
-$button--float: null !default;
-$button--margin: null !default;
 $button--cursor: null !default;
-$button--height: null !default;
