@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'mixins/btn-group-margin-x';
+@import 'mixins/background-color';
 
 /**
  * buttons
@@ -8,12 +9,16 @@
 @mixin mixin-dispatcher($value, $flags, $mixin) {
   @if $mixin == 'btn-group-margin-x' {
     @include btn-group-margin-x($value, $flags);
+  } @elseif $mixin == 'background-color' {
+    @include background-color($value, $flags);
   }
 };
 
 $button--selector: selector--constructor($button--synthax, 'btn');
 
 @include selector($button--selector) {
+  @include declaration('-include-background-color', $button--background-color);
+
   @include declaration('display', $button--display);
   @include declaration('color', $button--color);
   @include declaration('font-family', $button--font-family);
@@ -27,7 +32,6 @@ $button--selector: selector--constructor($button--synthax, 'btn');
   @include declaration('cursor', $button--cursor);
   @include declaration('cursor', not-allowed, ('[disabled="true"'));
   @include declaration('background-image', none); // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  @include declaration('background-color', $button--background-color);
   @include declaration('user-select', none);
   @include declaration('white-space', nowrap);
   @include declaration('border-radius', $button--border-radius);

@@ -1,3 +1,5 @@
+// scss-lint:disable ColorVariable
+
 // Synthax
 $button--prefix: 'c' !default;
 $button--synthax: (
@@ -45,44 +47,24 @@ $button--border-color: (
 
 $button--background-color: (
   'default': (
-    'default': rgb(255, 255, 255),
-    ':hover': darken(rgb(255, 255, 255), 10%),
-    ':active': darken(rgb(255, 255, 255), 10%),
-    ':focus': darken(rgb(255, 255, 255), 10%),
-    '[disabled="true"': rgb(255, 255, 255) !important,
-    '-disabled': rgb(255, 255, 255) !important,
+    'default': rgb(255, 255, 255) darken(rgb(255, 255, 255), 10%),
+    '[disabled="true"': rgb(255, 255, 255) rgb(255, 255, 255),
   ),
   '-primary': (
-    'default': rgb(31, 13, 51),
-    ':hover': darken(rgb(31, 13, 51), 10%),
-    ':active': darken(rgb(31, 13, 51), 10%),
-    ':focus': darken(rgb(31, 13, 51), 10%),
-    '[disabled="true"': rgb(31, 13, 51) !important,
-    '-disabled': rgb(31, 13, 51) !important,
+    'default': rgb(31, 13, 51) darken(rgb(31, 13, 51), 10%),
+    '[disabled="true"': rgb(31, 13, 51) rgb(31, 13, 51),
   ),
   '-success': (
-    'default': rgb(55, 211, 189),
-    ':hover': darken(rgb(55, 211, 189), 10%),
-    ':active': darken(rgb(55, 211, 189), 10%),
-    ':focus': darken(rgb(55, 211, 189), 10%),
-    '[disabled="true"': rgb(55, 211, 189) !important,
-    '-disabled': rgb(55, 211, 189) !important,
+    'default': rgb(55, 211, 189) darken(rgb(55, 211, 189), 10%),
+    '[disabled="true"': rgb(55, 211, 189) rgb(55, 211, 189),
   ),
   '-warning': (
-    'default': rgb(255, 176, 0),
-    ':hover': darken(rgb(255, 176, 0), 10%),
-    ':active': darken(rgb(255, 176, 0), 10%),
-    ':focus': darken(rgb(255, 176, 0), 10%),
-    '[disabled="true"': rgb(255, 176, 0) !important,
-    '-disabled': rgb(255, 176, 0) !important,
+    'default': rgb(255, 176, 0) darken(rgb(255, 176, 0), 10%),
+    '[disabled="true"': rgb(255, 176, 0) rgb(255, 176, 0),
   ),
   '-danger': (
-    'default': rgb(253, 65, 100),
-    ':hover': darken(rgb(253, 65, 100), 10%),
-    ':active': darken(rgb(253, 65, 100), 10%),
-    ':focus': darken(rgb(253, 65, 100), 10%),
-    '[disabled="true"': rgb(253, 65, 100) !important,
-    '-disabled': rgb(253, 65, 100) !important,
+    'default': rgb(253, 65, 100) darken(rgb(253, 65, 100), 10%),
+    '[disabled="true"': rgb(253, 65, 100) rgb(253, 65, 100),
   ),
 );
 

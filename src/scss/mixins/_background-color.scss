@@ -1,0 +1,17 @@
+@mixin background-color ($value, $flags) {
+  $default-value: null;
+  $state-value: null;
+
+  @if type-of($value) == 'list' {
+    $default-value: nth($value, 1);
+    $state-value: nth($value, 2);
+  } @else {
+    $default-value: $value;
+    $state-value: darken($value, 10%);
+  }
+
+  @include declaration('background-color', $default-value, $flags);
+  @include declaration('background-color', $state-value, append($flags, ':hover'));
+  @include declaration('background-color', $state-value, append($flags, ':focus'));
+  @include declaration('background-color', $state-value, append($flags, ':active'));
+}
