@@ -66,7 +66,7 @@ $button--background-color: (
     'default': rgb(253, 65, 100) darken(rgb(253, 65, 100), 10%),
     '[disabled="true"': rgb(253, 65, 100) rgb(253, 65, 100),
   ),
-);
+) !default;
 
 $button--text-decoration: (
   '-link': (
@@ -97,3 +97,4 @@ $button--transition: null !default;
 $button--float: null !default;
 $button--margin: null !default;
 $button--cursor: null !default;
+$button--height: null !default;

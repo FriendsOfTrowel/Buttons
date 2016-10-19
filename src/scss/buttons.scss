@@ -46,6 +46,7 @@ $button--selector: selector--constructor($button--synthax, 'btn');
   @include declaration('border-color', $button--border-color);
   @include declaration('float', $button--float);
   @include declaration('width', $button--width);
+  @include declaration('height', $button--height);
   @include declaration('opacity', $button--opacity);
   @include declaration('cursor', default);
   @include declaration('cursor', pointer, ('<button'));
