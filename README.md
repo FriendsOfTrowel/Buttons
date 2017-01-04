@@ -9,17 +9,17 @@ buttons is a *Trowel Component*, please refer to the [Trowel doc](http://trowel.
 
 ## Getting Started
 ### Download
-You can easily install trowel-buttons by using NPM or Bower
+You can easily install trowel-buttons by using NPM or Bower with the name `trowel-buttons` (previously `friendsOfTrowel-buttons-component`)
 
 ```bash
 # With bower
-$ bower install friendsOfTrowel-buttons-component
+$ bower install trowel-buttons
 
 # With npm
-$ npm install friendsOfTrowel-buttons-component
+$ npm install trowel-buttons
 
 # With yarn
-$ yarn add friendsOfTrowel-buttons-component
+$ yarn add trowel-buttons
 ```
 
 
