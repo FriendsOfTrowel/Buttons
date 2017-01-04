@@ -15,11 +15,6 @@
   "bugs": {
     "url": "https://github.com/FriendsOfTrowel/buttons/issues"
   },
-  "files": [
-    "src/scss/buttons.scss",
-    "src/twig/buttons.html.twig",
-    "injector.json"
-  ],
   "keywords": [
     "scss",
     "css",
