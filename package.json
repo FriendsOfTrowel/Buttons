@@ -1,6 +1,6 @@
 {
   "name": "friendsOfTrowel-buttons-component",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "The official Trowel Component for Buttons",
   "scripts": {
     "test": "gulp test",
