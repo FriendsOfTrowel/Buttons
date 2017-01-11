@@ -35,6 +35,6 @@
     "url": "git+https://github.com/FriendsOfTrowel/buttons.git"
   },
   "dependencies": {
-    "trowel-core": "^3.0.0"
+    "trowel-core": "^3.2.0"
   }
 }

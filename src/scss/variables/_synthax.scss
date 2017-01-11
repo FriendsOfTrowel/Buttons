@@ -1,9 +1,1 @@
-$button--prefix: 'c' !default;
-$button--synthax: (
-  'prefix': $button--prefix,
-  'separator': (
-    'prefix': '-',
-    'element': '__',
-    'modifier': '--',
-  ),
-);
+$button--synthax: null !default;
