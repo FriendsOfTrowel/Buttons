@@ -10,7 +10,7 @@
   }
 };
 
-$button--selector: selector--constructor($button--synthax, 'btn');
+$button--selector: selector--constructor($button--syntax, 'btn');
 
 @include selector($button--selector) {
   @include declaration('-include-background-color', $button--background-color);
@@ -55,7 +55,7 @@ $button--selector: selector--constructor($button--synthax, 'btn');
 }
 
 
-$button-group--selector: selector--constructor($button--synthax, 'btn-group');
+$button-group--selector: selector--constructor($button--syntax, 'btn-group');
 
 @include selector($button-group--selector) {
   @include declaration('display', flex);
