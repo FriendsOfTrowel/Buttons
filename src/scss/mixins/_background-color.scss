@@ -1,4 +1,4 @@
-@mixin background-color ($value, $flags) {
+@function button-background-color--mixin($value, $flags) {
   $default-value: null;
   $state-value: null;
 
@@ -10,8 +10,10 @@
     $state-value: darken($value, 10%);
   }
 
-  @include declaration('background-color', $default-value, $flags);
-  @include declaration('background-color', $state-value, append($flags, ':hover'));
-  @include declaration('background-color', $state-value, append($flags, ':focus'));
-  @include declaration('background-color', $state-value, append($flags, ':active'));
+  @return (
+    ('background-color', $default-value, $flags),
+    ('background-color', $state-value, append($flags, ':hover')),
+    ('background-color', $state-value, append($flags, ':focus')),
+    ('background-color', $state-value, append($flags, ':active')),
+  ); 
 }

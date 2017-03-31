@@ -1,3 +1,5 @@
-@mixin btn-group-margin-x ($value, $flags) {
-  @include declaration('margin-left', $value * -1, $flags);
+@function btn-group-margin-x--mixin($value, $flags) {
+  @return (
+    ('margin-left', $value * -1, $flags),
+  );
 }
