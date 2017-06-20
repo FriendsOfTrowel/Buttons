@@ -26,6 +26,7 @@ $button--border-color: (
   '-success': transparent,
   '-warning': transparent,
   '-danger': transparent,
+  '-link': transparent,
 ) !default;
 $button--background-color: (
   'default': (
@@ -48,6 +49,9 @@ $button--background-color: (
     'default': rgb(253, 65, 100) darken(rgb(253, 65, 100), 10%),
     '[disabled="true"': rgb(253, 65, 100) rgb(253, 65, 100),
   ),
+  '-link': (
+    'default': (transparent, transparent),
+  )
 ) !default;
 $button--opacity: (
   '[disabled="true"': 0.5,
@@ -61,7 +65,10 @@ $button--font-size: (
 $button--text-decoration: (
   'default': none,
   '-link': (
-    ':hover': underline,
+    ':hover': (
+      'default': underline,
+      '[disabled="true"': none,
+    ),
   )
 ) !default;
 $button--line-height: trwl-theme('line-height') !default;
