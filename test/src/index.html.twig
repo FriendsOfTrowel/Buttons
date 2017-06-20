@@ -14,43 +14,40 @@
         buttons
     </h1>
 
-
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default', 'lg'], 'content': 'button lg'} %}
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default'], 'content': 'button md'} %}
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default', 'sm'], 'content': 'button sm'} %}
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default', 'xs'], 'content': 'button xs'} %}
+    <button class="btn">button</button>
+    <a href="#" class="btn">anchor</a>
 
     <hr>
 
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default'], 'content': 'default'} %}
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['primary'], 'content': 'primary'} %}
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['success'], 'content': 'success'} %}
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['warning'], 'content': 'warning'} %}
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['danger'], 'content': 'danger'} %}
+
+    <button class="btn btn--default btn--lg">button lg</button>
+    <button class="btn btn--default">button md</button>
+    <button class="btn btn--default btn--sm">button sm</button>
+    <button class="btn btn--default btn--xs">button xs</button>
 
     <hr>
 
-    {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['block', 'primary'], 'content': 'button block'} %}
+    <button class="btn btn--default">default</button>
+    <button class="btn btn--primary">primary</button>
+    <button class="btn btn--success">success</button>
+    <button class="btn btn--warning">warning</button>
+    <button class="btn btn--danger">danger</button>
 
     <hr>
 
-    {% embed '../../src/twig/buttons.html.twig' with { 'modifiers': ['primary'], 'content': 'disabled attr'} only %}
-        {% block additional_attrs %}disabled="true"{% endblock %}
-    {% endembed %}
+    <button class="btn btn--block btn--primary">button block</button>
+
+    <hr>
+
+    <button class="btn btn--primary" disabled="true">disabled attr</button>
+
+
     <hr>
 
     <div class="c-btn-group">
-        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default', 'sm'], 'content': 'default' } %}
-        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default'], 'content': 'default' } %}
-        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['default'], 'content': 'default' } %}
+        <button class="btn btn--default btn--sm">default</button>
+        <button class="btn btn--default">default</button>
+        <button class="btn btn--default">default</button>
     </div>
-
-    {#
-    <div class="c-btn-group">
-        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['primary'], 'content': 'primary' } %}
-        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['success'], 'content': 'success' } %}
-        {% include '../../src/twig/buttons.html.twig' with { 'modifiers': ['warning'], 'content': 'warning' } %}
-    </div>
-    #}
   </body>
 </html>
