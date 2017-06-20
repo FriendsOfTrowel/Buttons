@@ -48,6 +48,7 @@ $button-group--selector: selector(new 'btn-group' with $button--syntax);
 
 @include statement($button-group--selector,(
   ('display', flex),
+  ('justify-content', $buttongroup--justify-content),
 ));
 
 
@@ -62,6 +63,7 @@ $button-inside-group--selector: selector(append $button--selector parent $button
   ('border-bottom-left-radius', 0, ':not(:first-child)'),
   ('border-top-right-radius', 0, ':not(:last-child)'),
   ('border-bottom-right-radius', 0, ':not(:last-child)'),
+  ('flex-grow', $buttongroup-item--flex-grow),
 ));
 
 
