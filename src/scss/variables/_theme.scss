@@ -12,16 +12,9 @@ $button--display: (
   '-block': block,
 ) !default;
 
-$button--border-width: (
-  'default': 0,
-  '-default': 0.0625em,
-) !default;
+$button--border-width: trwl-theme('border-width') !default;
 
-$button--padding: (
-  'default': 0.666666667em 1.666666667em,
-  '-default': #{0.666666667em - value($button--border-width, ('-default'))} #{1.666666667em - value($button--border-width, ('-default'))},
-  '-xs': 0.666666667em 1.333333337em,
-) !default;
+$button--padding: trwl-theme('padding-y') trwl-theme('padding-x') !default;
 
 $button--width: (
   '-block': 100%,
@@ -33,14 +26,12 @@ $button--height: null !default;
 
 // color
 $button--color: (
-  'default': rgb(31, 13, 51),
-  '-primary': rgb(255, 255, 255),
-  '-success': rgb(255, 255, 255),
-  '-danger': rgb(255, 255, 255),
-  '-warning': rgb(255, 255, 255),
+  'default': rgb(255, 255, 255),
+  '-default': trwl-theme-color('primary'),
 ) !default;
 
 $button--border-color: (
+  'default': transparent,
   '-default': currentColor,
 ) !default;
 
@@ -74,10 +65,10 @@ $button--opacity: (
 
 // text
 $button--font-size: (
-  'default': 1rem,
-  '-lg': 1.2rem,
-  '-sm': 0.8rem,
-  '-xs': 0.65rem,
+  'default': trwl-theme-size('md'),
+  '-lg': trwl-theme-size('lg'),
+  '-sm': trwl-theme-size('sm'),
+  '-xs': trwl-theme-size('xs'),
 ) !default;
 
 $button--text-decoration: (
@@ -86,18 +77,18 @@ $button--text-decoration: (
   )
 ) !default;
 
-$button--line-height: 1.2em !default;
+$button--line-height: trwl-theme('line-height') !default;
 $button--text-align: center !default;
 
-$button--font-family: null !default;
+$button--font-family: trwl-theme-size('font-family') !default;
 $button--font-weight: null !default;
 $button--text-transform: null !default;
 $button--letter-spacing: null !default;
 
 
 // order
-$button--border-radius: 0.2em !default;
-$button--border-style: solid !default;
+$button--border-radius: trwl-theme('border-radius') !default;
+$button--border-style: trwl-theme('border-style') !default;
 
 $button--box-shadow: null !default;
 $button--transition: null !default;
